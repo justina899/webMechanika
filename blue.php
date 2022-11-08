@@ -1,3 +1,9 @@
+<?php 
+    // header( "refresh:0.1;url=red.php" );
+    if(isset($_GET['r'])){
+        header("Location: red.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-<a href="blue.php">to blue</a>  
-<?php 
-//  header('Location: red.php');
-//      exit();
-header( "refresh:5;url=red.php" );
-?>
+<body style="background-color:blue">
+<a href="blue.php?r">to blue</a>  
+
 </body>
 </html>
