@@ -2,7 +2,9 @@
 echo $_SERVER["REQUEST_METHOD"];
 function getColor() {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $color = "#f5fa64";
+        header("Location: ./7uzd.php");
+        die;
+       
     } elseif ($_SERVER["REQUEST_METHOD"] == "GET"){
         $color = "#00ff9d";
     }
@@ -20,14 +22,13 @@ function getColor() {
 </head>
 <body style="background-color: <?php echo getColor()?>;">
 
-<form action="6uzd.php" method="get">
+<form action="7uzd.php" method="get">
 <button type="submit">button GET green</button>
 </form>
 
-<form action="6uzd.php" method="post">
+<form action="7uzd.php" method="post">
 <button type="submit">button POST yellow</button>
 </form>
-
     
 </body>
 </html>
